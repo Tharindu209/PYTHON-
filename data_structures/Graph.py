@@ -3,19 +3,23 @@ class graph:
         self.adj = [ [0]*size for i in range(size) ]
         self.size = size
         
-    def add_edge(self, orig,dest):
-        if (orig >self.size) or (dest>self.size) or (orig < 0) or (dest< 0):
+    def add_edge(self, x,y):
+        if (x >self.size) or (y > self.size) or (x < 0) or (y < 0):
             print("Invalid Edge")
         else:
-            self.adj[orig-1][dest-1] = 1
-            self.adj[dest-1][orig-1] = 1
+            self.adj[x-1][y-1] = 1
+            self.adj[x-1][y-1] = 1
             
-    def remove_edge(self, orig, dest):
-        if (orig >self.size) or (dest>self.size) or (orig < 0) or (dest< 0):
+    def remove_edge(self, x, y):
+        if (x >self.size) or (y
+        >self.size) or (x < 0) or (y
+        < 0):
             print("Invalid Edge")
         else:
-            self.adj[orig-1][dest-1] = 0
-            self.adj[dest-1][orig-1] = 0
+            self.adj[x-1][y
+            -1] = 0
+            self.adj[y
+            -1][x-1] = 0
     
     def display(self):
         for row in self.adj:
