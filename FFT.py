@@ -2,12 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def FFT(x):
-    """
-    A recursive implementation of 
-    the 1D Cooley-Tukey FFT, the 
-    input should have a length of 
-    power of 2. 
-    """
     N = len(x)
     
     if N == 1:
